@@ -1,0 +1,7 @@
+=== Welcome to the Active Scaffold Test Application
+
+All tests in this app should pass with the version of ActiveScaffold assigned in 
+the git submodule and the current code.
+
+Please do not use fixtures, use factories.
+

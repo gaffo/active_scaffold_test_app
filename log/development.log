@@ -1,0 +1,314 @@
+  [4;36;1mSQL (0.000101)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000040)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mCREATE DATABASE `test_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000070)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000039)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003354)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003596)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000170)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000212)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20090102183052)
+  [4;36;1mSQL (0.000073)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000040)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000157)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20090102183052)
+  [4;36;1mSQL (0.002900)[0m   [0;1mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000363)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090102183052')[0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000095)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000464)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.000342)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (0.000157)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (0.000079)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000039)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPerson Columns (0.000489)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 12:35:57) [GET]
+  Session ID: bfa28f0d99f2d7ccf1a243dbc2190e75
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;35;1mSQL (0.000205)[0m   [0mSELECT count(*) AS count_all FROM `people` [0m
+  [4;36;1mPerson Load (0.000186)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00503)
+Rendered people/_list_column_headings (0.00357)
+Rendered people/_messages (0.00004)
+Rendered people/_list (0.03139)
+Completed in 0.14035 (7 reqs/sec) | Rendering: 0.09975 (71%) | DB: 0.00100 (0%) | 200 OK [http://localhost/people]
+  [4;36;1mPerson Columns (0.000510)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-01-02 12:35:59) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYzk3MzU0MDZlOGU0N2IwMTJmODU2MTIzY2IzZTM4
+YmIiDmFzOnBlb3BsZXsGOglsaXN0ewYiCXBhZ2VpBiIKZmxhc2hJQzonQWN0
+aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d2d35960082fbcb225df6c347d4665b0f9c4ee36
+  Parameters: {"adapter"=>"_list_inline_adapter", "_method"=>"get", "action"=>"new", "controller"=>"people"}
+Rendered people/_form_attribute (0.00035)
+Rendered people/_form (0.03291)
+Rendered people/_create_form (0.04424)
+Rendering _list_inline_adapter
+Rendered core/_messages (0.00004)
+Completed in 0.10352 (9 reqs/sec) | Rendering: 0.01965 (18%) | DB: 0.00000 (0%) | 200 OK [http://localhost/people/new?_method=get&adapter=_list_inline_adapter]
+ActiveScaffold: extending RESTful routes for people
+ActiveScaffold: extending RESTful routes for people
+
+
+Processing IndexController#index (for 127.0.0.1 at 2009-01-02 12:38:55) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYzk3MzU0MDZlOGU0N2IwMTJmODU2MTIzY2IzZTM4
+YmIiDmFzOnBlb3BsZXsGOglsaXN0ewYiCXBhZ2VpBiIKZmxhc2hJQzonQWN0
+aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d2d35960082fbcb225df6c347d4665b0f9c4ee36
+  Parameters: {"action"=>"index", "controller"=>"index"}
+  [4;36;1mSQL (0.000083)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering index/index
+Completed in 0.07430 (13 reqs/sec) | Rendering: 0.06828 (91%) | DB: 0.00012 (0%) | 200 OK [http://localhost/]
+  [4;36;1mPerson Columns (0.000846)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 12:39:02) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYzk3MzU0MDZlOGU0N2IwMTJmODU2MTIzY2IzZTM4
+YmIiDmFzOnBlb3BsZXsGOglsaXN0ewYiCXBhZ2VpBiIKZmxhc2hJQzonQWN0
+aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d2d35960082fbcb225df6c347d4665b0f9c4ee36
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;35;1mSQL (0.000186)[0m   [0mSELECT count(*) AS count_all FROM `people` [0m
+  [4;36;1mPerson Load (0.000184)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00643)
+Rendered people/_list_column_headings (0.00389)
+Rendered people/_messages (0.00005)
+Rendered people/_list (0.01296)
+Completed in 0.06348 (15 reqs/sec) | Rendering: 0.04194 (66%) | DB: 0.00122 (1%) | 200 OK [http://localhost/people]
+  [4;36;1mPerson Columns (0.000504)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-01-02 12:39:04) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYzk3MzU0MDZlOGU0N2IwMTJmODU2MTIzY2IzZTM4
+YmIiDmFzOnBlb3BsZXsGOglsaXN0ewYiCXBhZ2VpBiIKZmxhc2hJQzonQWN0
+aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d2d35960082fbcb225df6c347d4665b0f9c4ee36
+  Parameters: {"adapter"=>"_list_inline_adapter", "_method"=>"get", "action"=>"new", "controller"=>"people"}
+Rendered people/_form_attribute (0.00033)
+Rendered people/_form (0.00489)
+Rendered people/_create_form (0.01184)
+Rendering _list_inline_adapter
+Rendered core/_messages (0.00004)
+Completed in 0.03233 (30 reqs/sec) | Rendering: 0.00901 (27%) | DB: 0.00000 (0%) | 200 OK [http://localhost/people/new?_method=get&adapter=_list_inline_adapter]
+ActiveScaffold: extending RESTful routes for people
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000092)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000123)[0m   [0;1mCREATE DATABASE `as_test_app_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000080)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000040)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000169)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002010)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003363)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20090102183052)
+  [4;35;1mSQL (0.001739)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000378)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090102183052')[0m
+  [4;35;1mSQL (0.000201)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000097)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000088)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000450)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.000341)[0m   [0mdescribe `people`[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSHOW KEYS FROM `people`[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000080)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000044)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003054)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000121)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000045)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002559)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001485)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003603)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000335)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000112)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000056)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000074)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000063)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.005248)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000306)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000093)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000076)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000353)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003117)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000303)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001790)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.004293)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000346)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.001026)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000081)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000113)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000044)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003864)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000104)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002933)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001471)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003576)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000351)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000081)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000114)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000043)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.002387)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000105)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000047)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001987)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001463)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003735)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000199)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000355)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000073)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000110)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000039)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.002678)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000109)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000047)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002513)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001452)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003414)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000144)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000332)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000073)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000040)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003409)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000105)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000047)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003210)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001472)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003429)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000148)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000328)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000073)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000039)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000106)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000045)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003909)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000114)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000066)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000054)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002848)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001450)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003448)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000195)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.001161)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000078)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000039)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000105)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000055)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.002450)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000122)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000048)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002683)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001516)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003454)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000250)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000365)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000081)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000176)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000043)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.002526)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000108)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000046)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002549)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001508)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003408)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000155)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000305)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000080)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000039)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000182)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000042)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000037)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.003422)[0m   [0;1mDROP DATABASE IF EXISTS `as_test_app_test`[0m
+  [4;35;1mSQL (0.000117)[0m   [0mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000054)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001935)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001563)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003412)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000142)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.000353)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090102183052')[0m

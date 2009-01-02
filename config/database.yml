@@ -1,0 +1,23 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  database: as_test_app_development
+  username: root
+  password:
+  socket: /var/lib/mysql/mysql.sock
+
+test:
+  adapter: mysql
+  encoding: utf8
+  database: as_test_app_test
+  username: root
+  password:
+  socket: /var/lib/mysql/mysql.sock
+  
+selenium:
+  adapter: mysql
+  encoding: utf8
+  database: as_test_app_test
+  username: root
+  password:
+  socket: /var/lib/mysql/mysql.sock

@@ -1,0 +1,191 @@
+  [4;36;1mSQL (0.000102)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000040)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mCREATE DATABASE `test_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000052)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002794)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003491)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000166)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000264)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20090102183052)
+  [4;35;1mSQL (0.001624)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000337)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090102183052')[0m
+  [4;35;1mSQL (0.000185)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000087)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000474)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.000349)[0m   [0mdescribe `people`[0m
+  [4;36;1mSQL (0.000156)[0m   [0;1mSHOW KEYS FROM `people`[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000095)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000043)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mCREATE DATABASE `as_test_app_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000081)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000038)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000404)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002896)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.003348)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.000163)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000206)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePeople (20090102183052)
+  [4;35;1mSQL (0.001650)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000338)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090102183052')[0m
+  [4;35;1mSQL (0.000246)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000100)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000090)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000463)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.000352)[0m   [0mdescribe `people`[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSHOW KEYS FROM `people`[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000080)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000043)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000033)[0m   [0;1mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000079)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000043)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000028)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000070)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000082)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000042)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000027)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000046)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000082)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000042)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000029)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000047)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000078)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000042)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000030)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /people with {} and HTTP headers {}
+  [4;35;1mPerson Columns (0.000650)[0m   [0mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 12:49:34) [GET]
+  Session ID: 098c21152c3951d60060f5785ecabd78
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;36;1mSQL (0.000192)[0m   [0;1mSELECT count(*) AS count_all FROM `people` [0m
+  [4;35;1mPerson Load (0.000173)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00450)
+Rendered people/_list_column_headings (0.00541)
+Rendered people/_messages (0.00007)
+Rendered people/_list (0.01524)
+Completed in 0.08048 (12 reqs/sec) | Rendering: 0.04781 (59%) | DB: 0.00116 (1%) | 200 OK [http://www.example.com/people]
+  [4;35;1mSQL (0.000101)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000078)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000043)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000029)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /people with {} and HTTP headers {}
+  [4;35;1mPerson Columns (0.000640)[0m   [0mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 12:50:56) [GET]
+  Session ID: 9865cce4200052331c2fbf0c9886edbe
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;36;1mSQL (0.000191)[0m   [0;1mSELECT count(*) AS count_all FROM `people` [0m
+  [4;35;1mPerson Load (0.000177)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00356)
+Rendered people/_list_column_headings (0.00532)
+Rendered people/_messages (0.00006)
+Rendered people/_list (0.01495)
+Completed in 0.07409 (13 reqs/sec) | Rendering: 0.04565 (61%) | DB: 0.00116 (1%) | 200 OK [http://www.example.com/people]
+  [4;35;1mSQL (0.000093)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000115)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000063)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000047)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /people with {} and HTTP headers {}
+  [4;35;1mPerson Columns (0.000651)[0m   [0mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 12:58:29) [GET]
+  Session ID: 7891b63e2ca95d0222421fb2a4ab9574
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;36;1mSQL (0.000201)[0m   [0;1mSELECT count(*) AS count_all FROM `people` [0m
+  [4;35;1mPerson Load (0.000205)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00403)
+Rendered people/_list_column_headings (0.00581)
+Rendered people/_messages (0.00007)
+Rendered people/_list (0.01556)
+Completed in 0.08118 (12 reqs/sec) | Rendering: 0.05243 (64%) | DB: 0.00128 (1%) | 200 OK [http://www.example.com/people]
+  [4;35;1mSQL (0.000100)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000078)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000043)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000030)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /people with {} and HTTP headers {}
+  [4;35;1mPerson Columns (0.000639)[0m   [0mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 12:59:18) [GET]
+  Session ID: afc447708ebb6a9ea476c213173fbd04
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;36;1mSQL (0.000190)[0m   [0;1mSELECT count(*) AS count_all FROM `people` [0m
+  [4;35;1mPerson Load (0.000166)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00357)
+Rendered people/_list_column_headings (0.00538)
+Rendered people/_messages (0.00007)
+Rendered people/_list (0.01321)
+Completed in 0.06433 (15 reqs/sec) | Rendering: 0.03779 (58%) | DB: 0.00115 (1%) | 200 OK [http://www.example.com/people]
+  [4;35;1mSQL (0.000093)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000081)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000042)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000028)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /people with {} and HTTP headers {}
+  [4;35;1mPerson Columns (0.000641)[0m   [0mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 12:59:45) [GET]
+  Session ID: 96d85e38c38360e7d69a72545be0f38c
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;36;1mSQL (0.000190)[0m   [0;1mSELECT count(*) AS count_all FROM `people` [0m
+  [4;35;1mPerson Load (0.000165)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00369)
+Rendered people/_list_column_headings (0.00536)
+Rendered people/_messages (0.00006)
+Rendered people/_list (0.01460)
+Completed in 0.07243 (13 reqs/sec) | Rendering: 0.04579 (63%) | DB: 0.00115 (1%) | 200 OK [http://www.example.com/people]
+  [4;35;1mSQL (0.000097)[0m   [0mROLLBACK[0m
+ActiveScaffold: extending RESTful routes for people
+  [4;36;1mSQL (0.000091)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000043)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000029)[0m   [0;1mBEGIN[0m
+REQUESTING PAGE: GET /people with {} and HTTP headers {}
+  [4;35;1mPerson Columns (0.000641)[0m   [0mSHOW FIELDS FROM `people`[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2009-01-02 13:04:22) [GET]
+  Session ID: 444105fe34334251409112e4d59ec665
+  Parameters: {"action"=>"index", "controller"=>"people"}
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT count(*) AS count_all FROM `people` [0m
+  [4;35;1mPerson Load (0.000171)[0m   [0mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT `people`.* FROM `people` ORDER BY people.`id` ASC LIMIT 0, 15[0m
+Rendering template within layouts/application
+Rendering people/list
+Rendered people/_list_header (0.00358)
+Rendered people/_list_column_headings (0.00544)
+Rendered people/_messages (0.00007)
+Rendered people/_list (0.01490)
+Completed in 0.07343 (13 reqs/sec) | Rendering: 0.04586 (62%) | DB: 0.00116 (1%) | 200 OK [http://www.example.com/people]
+  [4;35;1mSQL (0.000104)[0m   [0mROLLBACK[0m
